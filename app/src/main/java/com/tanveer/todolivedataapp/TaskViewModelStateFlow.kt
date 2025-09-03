@@ -10,11 +10,12 @@ class TaskViewModelStateFlow :ViewModel(){
     val taskList: StateFlow<List<TaskStateFlow>> = _taskList
      private var nextId = 1
 
+    //function to add task
     fun addTask(name: String){
         val task = TaskStateFlow(nextId++, name)
         _taskList.update { it + task }
     }
-
+ //function to remove task
     fun removeTask(task: TaskStateFlow){
         _taskList.update { it.filterNot { it.id == task.id}}
         }

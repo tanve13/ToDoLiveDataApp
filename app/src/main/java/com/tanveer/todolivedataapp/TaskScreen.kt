@@ -52,8 +52,6 @@ fun TaskScreen(viewModel: TaskViewModel) {
             }) {
                 Text(text = "Add")
             }
-
-
         }
         Spacer(modifier = Modifier.height(24.dp))
         LazyColumn(verticalArrangement = Arrangement.spacedBy(8.dp)) {
