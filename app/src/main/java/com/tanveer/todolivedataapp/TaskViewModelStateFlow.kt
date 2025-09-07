@@ -19,7 +19,6 @@ class TaskViewModelStateFlow :ViewModel(){
     fun removeTask(task: TaskStateFlow){
         _taskList.update { it.filterNot { it.id == task.id}}
         }
-
 }
 
 
